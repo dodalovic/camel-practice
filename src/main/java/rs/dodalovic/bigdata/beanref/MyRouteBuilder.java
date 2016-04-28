@@ -13,6 +13,6 @@ public class MyRouteBuilder extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         from("file:/home/dodalovic/Desktop/folder?fileName=file.txt")
-                .to("log:file");
+                .bean(myFileProcessor);
     }
 }
